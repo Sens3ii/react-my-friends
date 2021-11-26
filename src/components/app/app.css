@@ -1,0 +1,10 @@
+.app {
+	overflow-x: hidden;
+	background: url("./background.jpg") center center no-repeat;
+	background-attachment: fixed;
+	height: 100vh;
+	background-color: #818181;
+	background-size: cover;
+	background-position: 0;
+	font-size: 16px;
+}

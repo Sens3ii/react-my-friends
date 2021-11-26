@@ -1,0 +1,28 @@
+{
+    "friends": [
+      {
+        "id": "1",
+        "name": "Ivan",
+        "age": "20",
+        "country": "Kazakhstan"
+      },
+      {
+        "id": "2",
+        "name": "Ernur",
+        "age": "19",
+        "country": "Kazakhstan"
+      },
+      {
+        "id": "3",
+        "name": "Kamran",
+        "age": "20",
+        "country": "Azerbaijan"
+      }
+    ],
+    "profile": 
+      {
+        "name": "Daniil",
+        "age": "20",
+        "country": "Kazakhstan"
+      }
+  }
