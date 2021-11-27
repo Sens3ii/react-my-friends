@@ -18,6 +18,7 @@ export default class App extends Component {
 		if (this.state.error) {
 			return <ErrorMessage />;
 		}
+
 		return (
 			<Router>
 				<div className="app">
@@ -37,7 +38,6 @@ export default class App extends Component {
 									/>
 									<Route path="/home" exact component={HomePage} />
 									<Route path="/profile" exact component={ProfilePage} />
-									<Route path="/login" exact component={LoginPage} />
 									<Route path="/friends/" exact component={FriendsPage} />
 									<Route
 										path="/friends/:id"
@@ -46,6 +46,8 @@ export default class App extends Component {
 											return <FriendItem friendId={id} />;
 										}}
 									/>
+									<Route path="/login" exact component={LoginPage} />
+
 									<Route path="*" exact component={NotFoundPage} />
 								</Switch>
 							</div>

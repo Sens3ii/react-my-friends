@@ -11,16 +11,32 @@ class FriendsPage extends Component {
 
 	state = {
 		error: false,
+		isLogged: false,
 	};
 
 	componentDidCatch() {
 		this.setState({ error: true });
 	}
+	componentDidMount() {
+		this.updateLogin();
+	}
+	updateLogin() {
+		this.gotService.getToken().then((item) => {
+			console.log(item.token);
+			if (item.token.length > 0) {
+				this.setState({ isLogged: true });
+				console.log("Logged");
+			}
+		});
+	}
 
 	render() {
-		const { error } = this.state;
+		const { error, isLogged } = this.state;
 		if (error) {
 			return <ErrorMessage />;
+		}
+		if (!isLogged) {
+			return <div className="mb-2 lead">You are not authed! Please login in to the system</div>;
 		}
 
 		return (

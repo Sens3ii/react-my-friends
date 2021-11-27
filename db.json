@@ -1,28 +1,32 @@
 {
-    "friends": [
-      {
-        "id": "1",
-        "name": "Ivan",
-        "age": "20",
-        "country": "Kazakhstan"
-      },
-      {
-        "id": "2",
-        "name": "Ernur",
-        "age": "19",
-        "country": "Kazakhstan"
-      },
-      {
-        "id": "3",
-        "name": "Kamran",
-        "age": "20",
-        "country": "Azerbaijan"
-      }
-    ],
-    "profile": 
-      {
-        "name": "Daniil",
-        "age": "20",
-        "country": "Kazakhstan"
-      }
+  "friends": [
+    {
+      "id": "1",
+      "name": "Ivan",
+      "age": "20",
+      "country": "Kazakhstan"
+    },
+    {
+      "id": "2",
+      "name": "Ernur",
+      "age": "19",
+      "country": "Kazakhstan"
+    },
+    {
+      "id": "3",
+      "name": "Kamran",
+      "age": "20",
+      "country": "Azerbaijan"
+    }
+  ],
+  "profile": {
+    "email": "test@test.com",
+    "password": "123123",
+    "name": "Daniil",
+    "age": "20",
+    "country": "Kazakhstan"
+  },
+  "token": {
+    "token": "$#$#$3434343f3f3f"
   }
+}

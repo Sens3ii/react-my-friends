@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "./header.css";
+import GotService from "../../services/gotService";
 
 const HeaderBlock = styled.div`
 	display: flex;
@@ -34,6 +36,29 @@ const HeaderLinks = styled.ul`
 `;
 
 const Header = () => {
+	const [isLogged, setLogged] = useState(false);
+	const [gotService] = useState(() => new GotService());
+
+	useEffect(() => {
+		updateLogin();
+	}, []);
+
+	const updateLogin = () => {
+		gotService.getToken().then((item) => {
+			console.log(item.token);
+			if (item.token.length > 0) {
+				setLogged(true);
+			}
+		});
+	};
+	const onLogout = () => {
+		gotService.postToken("");
+		setLogged(false);
+		window.location.reload();
+	};
+
+	const logged = !isLogged ? <Link to="/login">Login</Link> : <Link onClick={onLogout}>Logout</Link>;
+
 	return (
 		<HeaderBlock>
 			<div className="header__left">
@@ -49,9 +74,7 @@ const Header = () => {
 					</li>
 				</HeaderLinks>
 			</div>
-			<HeaderLogin>
-				<Link to="/login">Login</Link>
-			</HeaderLogin>
+			<HeaderLogin>{logged}</HeaderLogin>
 		</HeaderBlock>
 	);
 };

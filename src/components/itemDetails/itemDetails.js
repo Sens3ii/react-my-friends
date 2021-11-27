@@ -41,6 +41,7 @@ function ItemDetails({ itemId, getData, children }) {
 				onItemLoaded();
 			})
 			.catch(onError);
+		
 	};
 
 	if (!item && isLoaded) {
