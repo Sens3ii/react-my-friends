@@ -1,6 +1,6 @@
 export default class GotService {
 	constructor() {
-		this._apiBase = "https://my-json-server.typicode.com/Sens3ii/react-my-friends";
+		this._apiBase = "http://localhost:3000";
 	}
 
 	getResource = async (url) => {
